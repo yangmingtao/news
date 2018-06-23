@@ -1,0 +1,100 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+     background-color: white;
+}
+@function px2rem($px){
+    $rem:37.5px;
+    @return ($px / $rem) + rem;
+}
+.header{
+    width: 100%;
+    height: px2rem(40px);
+    background-color: red;
+    &-item{
+          font-size: px2rem(16px);
+          color: white;
+          float: left;
+          line-height: px2rem(40px);
+          list-style: none;
+          margin-left: px2rem(35.83px);
+    }
+    &-item:nth-child(2){
+        font-size: px2rem(18px);
+    }
+}
+.banner{
+   position: relative;
+}
+.banner-item{
+    display: block;
+    height: px2rem(190px);
+    width: 100%;
+}
+.banner-title{
+    color: white;
+    font-size: px2rem(16px);
+    position: absolute;
+    left: px2rem(13px);
+    bottom: px2rem(10px);
+}
+.news{
+    width: 100%;
+    .news-content{
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: px2rem(10px);
+        padding-right: px2rem(10px);
+    }
+    .news-item{
+        position: relative;
+        height: px2rem(90px);
+        list-style: none;
+        overflow: hidden;
+        border-bottom: px2rem(1px) solid #ececec;
+        .news-img{
+            float: left;
+            margin-top: px2rem(10px);
+            height: px2rem(70px);
+            width: px2rem(95px);
+            display: block;
+        }
+        .news-title{
+            color: #404040;
+            font-size: px2rem(17px);
+            margin-top: px2rem(10px);;
+            padding-left: px2rem(10px);;
+            position: absolute;
+            top: px2rem(-5px);
+            left: px2rem(95px);
+        }
+        .time{
+            position: absolute;
+            bottom: px2rem(6px);
+            left: px2rem(95px);
+            margin-left: px2rem(10px);
+            color: darkgrey;
+            font-size: px2rem(12px);
+        }
+        .num{
+            font-size: px2rem(12px);
+            position: absolute;
+            color: darkgrey;
+            bottom: px2rem(6px);
+            right: px2rem(10px);
+            &:before{
+                position: absolute;
+                content: '  ';
+                background: url(../img/read.png);
+                background-size: contain;
+                width: px2rem(16px);
+                height: px2rem(16px);
+                right: px2rem(18px);
+                bottom: px2rem(1.5px);
+                display: block;
+            }
+        }
+    }
+}
